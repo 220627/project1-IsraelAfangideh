@@ -5,3 +5,7 @@ We are asking them to trust us
 Managers need a way to track trustworthiness
 Employees need a system that maintains and increments Trust
 This is what we are now going to build
+
+All code for the project including the sql script is in the Carthage folder. 
+I made the tables but chose to do all initial inserts through the java instead of in the sql script.
+Feels like the right decision, we'll see how it goes. 
