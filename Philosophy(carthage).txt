@@ -1,0 +1,7 @@
+When we talk about a reimbursement manager, we are really talking about Trust & Trustworthiness
+We are talking about a way to manage drivers based on Trustworthiness
+And when we ask/tell drivers to spend money, and that we will reimburse them for their expenses
+We are asking them to trust us
+Managers need a way to track trustworthiness
+Employees need a system that maintains and increments Trust
+This is what we are now going to build
