@@ -13,7 +13,7 @@ public class EmployeeDAO implements EmployeeDAOInterface{
 	public boolean insertEmployee(employees employees) {
 		try(Connection conn =  ConnectionsUtil.getConnection()){
 			
-			String sql = "insert into employees (username, password, first_name, last_name, email, employee_role, admin_notes) values (?, ?, ?, ?, ?, ?, ?);";
+			String sql = "insert into employees(username, password, first_name, last_name, email, employee_role, admin_notes) values (?, ?, ?, ?, ?, ?, ?);";
 				
 			
 			PreparedStatement ps = conn.prepareStatement(sql);

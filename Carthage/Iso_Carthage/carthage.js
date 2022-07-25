@@ -1,8 +1,10 @@
-const url = "http://localhost:3000"
+const url = "http://localhost:7171"
 
 document.getElementById("submit").onclick = insertEmployee
 
 async function insertEmployee() {
+
+  
 
     let username = document.getElementById("username").value
     let password  = document.getElementById("password").value

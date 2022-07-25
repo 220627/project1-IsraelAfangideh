@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.AfangidehAyah.controllers.EmployeeController;
+import com.AfangidehAyah.controllers.reimbursement_statusController;
 import com.AfangidehAyah.util.ConnectionsUtil;
 
 import io.javalin.Javalin;
@@ -37,9 +38,14 @@ public class Launcher {
 					config.enableCorsForAllOrigins(); //this lets us process HTTP requests from any origin
 				}
 				
-				).start(6000); 
+				).start(7171); 
 	EmployeeController ec = new EmployeeController ();
+	reimbursement_statusController rsc = new reimbursement_statusController ();
 		app.post("/register", ec.addEmployee);
+		
+		app.post("/addstatus", rsc.addNewReimbursementStatus);
+		app.post("/addstatuswithid", rsc.addNewReimbursementStatuswithid);
 	}
+	
 
 }
