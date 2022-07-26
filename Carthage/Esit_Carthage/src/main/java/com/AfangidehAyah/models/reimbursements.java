@@ -47,6 +47,20 @@ public class reimbursements {
 		this.reimb_resolver = reimb_resolver;
 	}
 
+	//no receipt
+public reimbursements(int reimb_id, BigDecimal reimb_amount, Timestamp reimb_submitted, String reimb_description,
+			int reimb_status, int reimb_author, int reimb_resolver) {
+		super();
+		this.reimb_id = reimb_id;
+		this.reimb_amount = reimb_amount;
+		this.reimb_submitted = reimb_submitted;
+		this.reimb_description = reimb_description;
+		this.reimb_status = reimb_status;
+		this.reimb_author = reimb_author;
+		this.reimb_resolver = reimb_resolver;
+	}
+
+
 //no id, no description
 	public reimbursements(BigDecimal reimb_amount, Timestamp reimb_submitted, byte[] reimb_receipt, int reimb_status,
 			int reimb_author, int reimb_resolver) {
