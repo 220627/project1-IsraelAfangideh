@@ -3,7 +3,9 @@ package com.AfangidehAyah;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.AfangidehAyah.controllers.AuthController;
 import com.AfangidehAyah.controllers.EmployeeController;
+import com.AfangidehAyah.controllers.reimbursementController;
 import com.AfangidehAyah.controllers.reimbursement_statusController;
 import com.AfangidehAyah.util.ConnectionsUtil;
 
@@ -41,10 +43,19 @@ public class Launcher {
 				).start(7171); 
 	EmployeeController ec = new EmployeeController ();
 	reimbursement_statusController rsc = new reimbursement_statusController ();
+	reimbursementController rc = new reimbursementController ();
+	AuthController ac = new AuthController ();
+		app.get("/reimbursements", rc.getReimbursementsHandler);
+		app.get("/reimbursementsbyauthor", rc.getReimbursementsAuthHandler);
 		app.post("/register", ec.addEmployee);
-		
+		app.post("/login", ac.loginHandler);
 		app.post("/addstatus", rsc.addNewReimbursementStatus);
 		app.post("/addstatuswithid", rsc.addNewReimbursementStatuswithid);
+		app.post("/addreimbursement", rc.addReimbursement);
+//		app.patch(path, rc.updatereimbursement);
+		app.put("/reimbursements/:id", rc.updatereimbursement);
+		
+	
 	}
 	
 

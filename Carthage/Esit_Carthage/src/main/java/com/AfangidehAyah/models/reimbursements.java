@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class reimbursements {
 	private int reimb_id;
-	private BigDecimal reimb_amount;
-	private Timestamp reimb_submitted;
+	private double reimb_amount;
+	private String reimb_submitted;
 	private String reimb_description;
 	private byte[] reimb_receipt;
 	private int reimb_status;
@@ -21,7 +21,7 @@ public class reimbursements {
 	}
 
 
-	public reimbursements(int reimb_id, BigDecimal reimb_amount, Timestamp reimb_submitted, String reimb_description,
+	public reimbursements(int reimb_id, double reimb_amount, String reimb_submitted, String reimb_description,
 			byte[] reimb_receipt, int reimb_status, int reimb_author, int reimb_resolver) {
 		super();
 		this.reimb_id = reimb_id;
@@ -35,7 +35,7 @@ public class reimbursements {
 	}
 
 
-	public reimbursements(BigDecimal reimb_amount, Timestamp reimb_submitted, String reimb_description,
+	public reimbursements(double reimb_amount, String reimb_submitted, String reimb_description,
 			byte[] reimb_receipt, int reimb_status, int reimb_author, int reimb_resolver) {
 		super();
 		this.reimb_amount = reimb_amount;
@@ -48,7 +48,7 @@ public class reimbursements {
 	}
 
 	//no receipt
-public reimbursements(int reimb_id, BigDecimal reimb_amount, Timestamp reimb_submitted, String reimb_description,
+public reimbursements(int reimb_id, double reimb_amount, String reimb_submitted, String reimb_description,
 			int reimb_status, int reimb_author, int reimb_resolver) {
 		super();
 		this.reimb_id = reimb_id;
@@ -62,7 +62,7 @@ public reimbursements(int reimb_id, BigDecimal reimb_amount, Timestamp reimb_sub
 
 
 //no id, no description
-	public reimbursements(BigDecimal reimb_amount, Timestamp reimb_submitted, byte[] reimb_receipt, int reimb_status,
+	public reimbursements(double reimb_amount, String reimb_submitted, byte[] reimb_receipt, int reimb_status,
 			int reimb_author, int reimb_resolver) {
 		super();
 		this.reimb_amount = reimb_amount;
@@ -94,22 +94,22 @@ public reimbursements(int reimb_id, BigDecimal reimb_amount, Timestamp reimb_sub
 	}
 
 
-	public BigDecimal getReimb_amount() {
+	public double getReimb_amount() {
 		return reimb_amount;
 	}
 
 
-	public void setReimb_amount(BigDecimal reimb_amount) {
+	public void setReimb_amount(double reimb_amount) {
 		this.reimb_amount = reimb_amount;
 	}
 
 
-	public Timestamp getReimb_submitted() {
+	public String getReimb_submitted() {
 		return reimb_submitted;
 	}
 
 
-	public void setReimb_submitted(Timestamp reimb_submitted) {
+	public void setReimb_submitted(String reimb_submitted) {
 		this.reimb_submitted = reimb_submitted;
 	}
 

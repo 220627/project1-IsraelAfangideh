@@ -25,5 +25,11 @@ public class EmployeeController {
 		
 		
 	};
+	public Handler getAddEmployee() {
+		return addEmployee;
+	}
+	public void setAddEmployee(Handler addEmployee) {
+		this.addEmployee = addEmployee;
+	}
 
 }

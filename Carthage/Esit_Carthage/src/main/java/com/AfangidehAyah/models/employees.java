@@ -63,6 +63,31 @@ public class employees {
 	}
 
 
+	
+
+
+	public employees(int employee_id, String username, String first_name, String last_name, String email,
+			float trust_score, String employee_role) {
+		super();
+		this.employee_id = employee_id;
+		this.username = username;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.trust_score = trust_score;
+		this.employee_role = employee_role;
+	}
+
+
+	public employees(int employee_id, String username, String first_name, String last_name) {
+		super();
+		this.employee_id = employee_id;
+		this.username = username;
+		this.first_name = first_name;
+		this.last_name = last_name;
+	}
+
+
 	public int getEmployee_id() {
 		return employee_id;
 	}
