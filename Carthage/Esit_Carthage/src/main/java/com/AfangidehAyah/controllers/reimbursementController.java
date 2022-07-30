@@ -22,7 +22,10 @@ public class reimbursementController {
 		
 		reimbursements newreimb = gson.fromJson(body, reimbursements.class);
 		reimbursements reimbursement = newreimb;
+		if(AuthController.ses != null) {
 	int employee_id = Integer.parseInt(ctx.cookie("employeeid"));
+	
+	System.out.println(Integer.parseInt(ctx.cookie("employeeid")));
 		if (rDAO.insertReimbursement(reimbursement, employee_id)) {
 			log.info("New reimbursement inserted");
 			ctx.status(202);
@@ -32,7 +35,9 @@ public class reimbursementController {
 			log.info("Failed to insert new reimbursement");
 		}
 		
-		
+		}else {
+			System.out.println("You must login to access this functionality");
+		}
 	};
 	
 	public Handler getReimbursementsHandler = (ctx) -> {

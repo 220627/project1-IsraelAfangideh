@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "table-row" class = "row">
+        <table id = "table" class = "sortable">
+            <thead><th> reimb_id</th>
+                <th> reimb_amount</th>
+                <th>Submitted</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Submitted By Employee Number</th>
+             
+            </thead>
+            <tbody id = "tablebody" class> 
+                <!-- We leave the tbody blankand will fill it using javascript-->
+                <td></td>
+                <td></td>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tbody>
+           
+        </table>
+    </div>
+    
+  	
+    
+    <button id="getallreimbursements" class="btn btn-danger">SHOW ALL REIMBURSEMENTS</button>
+    </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+
+        <h1 id="h1">Approve or Deny Reimbursements</h1>
+        <h2>Change Status to 0 for pending</h2>
+        <h2>1 for Approved</h2>
+        <h2>&</h2>
+        <h2>2 for DENIED</h2>
+<label for="reimbid">Reimbursement Id:</label><br>
+<input type="number" id="reimbid"><br><br>
+<label for="">Change Reimbursement Status To: (0 = Pending, 1= Approved, 2 = Denied)</label><br>
+<input type="number" id="newReimbStatus"><br><br>
+<label for="submitReimbUpdate"></label>
+<input type="submit" id="submitReimbUpdate">
+
+
+    </div>
+    <script src="getReimbursements.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</body>
+</html>

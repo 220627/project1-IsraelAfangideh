@@ -10,8 +10,24 @@
 <center>
     <br><br><br><br><br><br><br>
     <br><br><br>
-    <span><button id = "Mgrbtn">Manager</button><button id="empbtn">Driver</button></span>
+    <span><button id = "Mgrbtn">Manager</button><button id="empbtn">Employee</button></span>
 </center>
-<script src="index.js"></script>
+<script>
+
+    document.getElementById("Mgrbtn").onclick = ManagerLogin
+    
+    // document.getElementById("empbtn").onclick = EmployeeLogin
+    
+    function ManagerLogin () {
+    
+        window.location.href = "http://127.0.0.1:5500/ManagerLogin.html"
+    }
+    document.getElementById("empbtn").onclick = EmployeeLogin
+
+    async function EmployeeLogin (){
+        window.location.href = "\Employeelogin.html"
+    }
+    
+    </script>
 </body>
 </html>

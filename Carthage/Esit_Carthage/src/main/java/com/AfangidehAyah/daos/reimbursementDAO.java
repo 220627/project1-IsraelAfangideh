@@ -31,7 +31,7 @@ try(Connection conn =  ConnectionsUtil.getConnection()){
 //	employees eid = aDAO.rs; 
 //	int employeeid = ac.getcollectedKeys();
 //	Context ctx = new Context ();
-	String sql = "insert into reimbursements(reimb_amount, reimb_submitted, reimb_description, reimb_receipt, reimb_author) values (?, ?, ?, ?, ?);";
+	String sql = "insert into reimbursements(reimb_amount, reimb_submitted, reimb_description, reimb_author) values (?, ?, ?, ?);";
 	
 	
 	PreparedStatement ps = conn.prepareStatement(sql);
@@ -40,8 +40,7 @@ try(Connection conn =  ConnectionsUtil.getConnection()){
 	ps.setDouble(1, reimbursement.getReimb_amount()); 
 	ps.setString(2, reimbursement.getReimb_submitted());
 	ps.setString(3, reimbursement.getReimb_description());
-	ps.setBytes(4, reimbursement.getReimb_receipt());
-	ps.setInt(5, employee_id);
+	ps.setInt(4, employee_id);
 //	ps.setInt
 	
 		
