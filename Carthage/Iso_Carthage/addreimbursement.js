@@ -33,7 +33,10 @@ async function insertReimbursement() {
       reimbjson.reimb_description +
       "' has been submitted and will be reviewed very soon";
     //   document.getElementById("header").style.color = "green";
-  } else {
+  } else if (response.status ===400) {
+
+    alert("THATS NOT YOUR EMPLOYEE ID!!!")
+  }else{
     document.getElementById("header").innerHTML =
       "Failed to add reimbursement, try again";
     document.getElementById("header").style.color = "red";

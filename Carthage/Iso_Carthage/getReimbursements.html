@@ -20,13 +20,15 @@ th {
 }
 
     </style>
-    <center> <button id="homebtn" class="btn btn-light" style="margin: 50px; margin-bottom: 50px;" >HOME</button></center>
+    <center> <button id="homebtn" class="btn btn-light" style="margin: 50px; margin-bottom: 50px;" >HOME</button>
+        <h6 style="color:azure; font-size:larger">List of reimbursements, you may sort by status</h6>
+</center>
    
 </head>
 <body>
     <div id = "table-row" class = "row">
         <table id = "table" class="table caption-top table-bordered table-responsive-lg d-print-table-row " class = "sorttable" style="margin-left: 50px;">
-            <caption style="color:azure; font-size:larger">List of reimbursements, you may sort by status</caption>
+           
             <thead><th> reimb_id</th>
                 <th> reimb_amount</th>
                 <th>Submitted</th>
@@ -55,14 +57,11 @@ th {
     <button id="getallreimbursements" class="btn btn-danger"  style="margin-left: 700px;"> SHOW ALL REIMBURSEMENTS</button>
     </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
     <div style="margin: 30px; margin-left: 500px;">
 
         <h1 id="h1">Approve or Deny Reimbursements</h1>
-        <h2>Change Status to 0 for pending</h2>
-        <h2>1 for Approved</h2>
-        <h2>&</h2>
-        <h2>2 for DENIED</h2>
+       
 <label for="reimbid">Reimbursement Id:</label><br>
 <input type="number" id="reimbid"><br><br>
 <label for="">Change Reimbursement Status To: (0 = Pending, 1= Approved, 2 = Denied)</label><br>

@@ -18,16 +18,22 @@ public class reimbursementController {
 		
 		String body = ctx.body();
 		
+	
 		Gson gson = new Gson();
 		
 		reimbursements newreimb = gson.fromJson(body, reimbursements.class);
 		
 //		if(AuthController.ses != null) {
 	
+	
+//			
+//	System.out.println(Integer.parseInt(ctx.cookie("employeeid")));
+//	
+//	System.out.println(newreimb.getReimb_author());
+	
+//		if (newreimb.getReimb_author() == ){
 			
-			
-	System.out.println("employee_id");
-		if (rDAO.insertReimbursement(newreimb)) {
+			if (rDAO.insertReimbursement(newreimb)) {
 			log.info("New reimbursement inserted");
 			ctx.status(202);
 			
@@ -37,6 +43,10 @@ public class reimbursementController {
 		}
 		
 
+//	}else {
+//		ctx.status(400);
+//		System.out.println("Entered wrong employee number");
+//	}
 	};
 	
 	public Handler getReimbursementsHandler = (ctx) -> {
@@ -115,10 +125,11 @@ public Handler updatereimbursement = (ctx) -> {
 	//if the update DAO method returns true (which means successful)..
 	if(rDAO.updateReimbursement(reimb_status, reimb_id)) {
 		ctx.status(202); //202 stands for "accepted"
-		
+		log.info("Reimbursement Updated");
 		System.out.println(reimb_id);
 	} else {
 		ctx.status(406); //406 stands for "not acceptable"
+		log.info("Reimbursement Failed to Update");
 	}
 	
 };

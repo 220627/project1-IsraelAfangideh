@@ -12,6 +12,9 @@
 const url = "http://localhost:7171"
 
 document.getElementById("submitLogin").onclick = login
+
+
+
 async function login() {
 
   
@@ -97,4 +100,6 @@ async function login() {
         document.getElementById("header").style.color = "red"
     }
 }
+
+
 }
