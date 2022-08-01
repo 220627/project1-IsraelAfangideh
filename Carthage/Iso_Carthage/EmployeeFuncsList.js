@@ -5,7 +5,7 @@ document.getElementById("getallreimbs").onclick = getallreimbs
 document.getElementById("newreimbsbtn").onclick = addreimbs
 function getallreimbs () {
     
-    window.location.href = "\getMYReimbursements.html"
+    window.location.href = "\getmyreimbs.html"
 }
 
 function addreimbs () {

@@ -3,6 +3,13 @@ const url = "http://localhost:7171"
 
 document.getElementById("submit").onclick = login
 
+document.getElementById("homebtn").onclick = TAKEMEHOME
+
+function TAKEMEHOME (){
+    console.log("clicked home button")
+    window.location.href = "\index.html"
+ }
+
 async function login() {
 
   

@@ -68,7 +68,7 @@ public class AuthController {
 
 
 //			response.addCookie(cookie);
-			System.out.println(currentemployeeid);
+			System.out.println(ctx.cookie("employeeid"));
 			
 		} else {
 			

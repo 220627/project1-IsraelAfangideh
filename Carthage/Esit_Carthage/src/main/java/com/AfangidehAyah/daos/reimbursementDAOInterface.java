@@ -6,7 +6,7 @@ import com.AfangidehAyah.models.reimbursements;
 
 public interface reimbursementDAOInterface {
 	
-	public boolean insertReimbursement(reimbursements reimbursement, int employee_id);
+	public boolean insertReimbursement(reimbursements reimbursement);
 	
 //	public ArrayList<reimbursements> getReimbursementsbyAuthor(reimbursements reimbursement);
 	

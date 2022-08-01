@@ -21,12 +21,13 @@ public class reimbursementController {
 		Gson gson = new Gson();
 		
 		reimbursements newreimb = gson.fromJson(body, reimbursements.class);
-		reimbursements reimbursement = newreimb;
-		if(AuthController.ses != null) {
-	int employee_id = Integer.parseInt(ctx.cookie("employeeid"));
+		
+//		if(AuthController.ses != null) {
 	
-	System.out.println(Integer.parseInt(ctx.cookie("employeeid")));
-		if (rDAO.insertReimbursement(reimbursement, employee_id)) {
+			
+			
+	System.out.println("employee_id");
+		if (rDAO.insertReimbursement(newreimb)) {
 			log.info("New reimbursement inserted");
 			ctx.status(202);
 			
@@ -35,9 +36,7 @@ public class reimbursementController {
 			log.info("Failed to insert new reimbursement");
 		}
 		
-		}else {
-			System.out.println("You must login to access this functionality");
-		}
+
 	};
 	
 	public Handler getReimbursementsHandler = (ctx) -> {
@@ -77,8 +76,8 @@ public class reimbursementController {
 		//what is ctx? it's the Context object! 
 		//This object contains a bunch of method that we can use to take in HTTP Requests and send HTTP Responses
 		
-		if(AuthController.ses != null) { //if the user is logged in, they can access this functionality
-		int employee_id = Integer.parseInt(ctx.cookie("employeeid"));
+//		if(AuthController.ses != null) { //if the user is logged in, they can access this functionality
+		int employee_id = Integer.parseInt(ctx.pathParam("eid"));
 			
 		//We need an ArrayList of Employees, courtesy of our EmployeeDAO
 		ArrayList<reimbursements> reimbursement = rDAO.getReimbursementsbyAuthor(employee_id);
@@ -95,10 +94,10 @@ public class reimbursementController {
 		
 		ctx.status(200); //ctx.status() sets the HTTP status code. 200 stands for "OK", the generic success code.
 		
-		} else { //if the user is NOT logged in (aka AuthController.ses wil be null)
-			ctx.result("YOU ARE NOT LOGGED IN!! *SMACK*");
-			ctx.status(401); //"forbidden" access code
-		}
+//		} else { //if the user is NOT logged in (aka AuthController.ses wil be null)
+//			ctx.result("YOU ARE NOT LOGGED IN!! *SMACK*");
+//			ctx.status(401); //"forbidden" access code
+//		}
 		
 	};
 

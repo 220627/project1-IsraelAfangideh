@@ -23,14 +23,9 @@ import io.javalin.http.Handler;
 public class reimbursementDAO implements reimbursementDAOInterface {
 
 	@Override
-	public boolean insertReimbursement(reimbursements reimbursement, int employee_id) {
+	public boolean insertReimbursement(reimbursements reimbursement) {
 try(Connection conn =  ConnectionsUtil.getConnection()){
-//	AuthController ac = new AuthController ();
-//	AuthDAO aDAO = new AuthDAO();
-	
-//	employees eid = aDAO.rs; 
-//	int employeeid = ac.getcollectedKeys();
-//	Context ctx = new Context ();
+
 	String sql = "insert into reimbursements(reimb_amount, reimb_submitted, reimb_description, reimb_author) values (?, ?, ?, ?);";
 	
 	
@@ -40,7 +35,7 @@ try(Connection conn =  ConnectionsUtil.getConnection()){
 	ps.setDouble(1, reimbursement.getReimb_amount()); 
 	ps.setString(2, reimbursement.getReimb_submitted());
 	ps.setString(3, reimbursement.getReimb_description());
-	ps.setInt(4, employee_id);
+	ps.setInt(4, reimbursement.getReimb_author());
 //	ps.setInt
 	
 		

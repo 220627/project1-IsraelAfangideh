@@ -5,16 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+      background-color:lightpink;
+    
+    }
+
+    </style>
+
+<center> <button id="homebtn" class="btn btn-light" style="margin: 50px; margin-bottom: 50px; margin-top: opx;" >HOME</button></center>
 </head>
 <body>
-    <h1 id="header">Log In</h1>
-<div>
-    <label for="username">Username:</label><br>
+    <center>
+    <div class="container" style="height: 1px; width: 50000px;">
+    <h1 id="header" style="color: azure;" >Log In</h1><br>
+<div >
+    <label for="username"> Username: </label><br>
     <input type="text" id = "username" class = "input" placeholder=""><br><br>
     <label for="password">Password:</label><br>
     <input type="password" id = "password" class = "input" placeholder=""><br>   <br>
-    <input type="submit" id = "submit" class = "submitbtn" ><br>
+    <input type="submit" id = "submitLoginE" class = "submitbtn" value="Login" ><br>
+  
 </div>
+</div>
+</center>
 <script src="EmployeeLogin.js"></script>
 </body>
 </html>

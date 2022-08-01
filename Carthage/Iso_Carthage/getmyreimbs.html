@@ -11,18 +11,23 @@
       background-color:lightpink;
     
     }
-
+    table, th, td {
+    border: 1px solid black;
+}
+th {
+    cursor: pointer;
+}
     </style>
 </head>
-
 <body>
+    
+   
     <div id = "table-row" class = "row">
-        <table id = "table" class="table table-bordered table-responsive-lg" class = "sortable">
+        <table id = "table" class="table table-bordered table-responsive-lg" class = "sortable" style="margin-left: 5px;">
             <thead><th> reimb_id</th>
                 <th> reimb_amount</th>
                 <th>Submitted</th>
                 <th>Description</th>
-                <th>Receipt</th>
                 <th>Status</th>
                 <!--<th>Submitted By</th>
                 <th>Resolved By</th>-->
@@ -35,19 +40,18 @@
                 <th></th>
                 <th></th>
                 <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                
             </tbody>
            
         </table>
     </div>
     
   	
-    
-    <button id="getallreimbursements" class="btn btn-success">SHOW ALL MY REIMBURSEMENTS</button>
+    <label for="employeenumber">Employee Number:</label>
+<input type="number" id="employeenumber">
+   <span><button id="getallreimbursements" class="btn btn-success">SHOW ALL MY REIMBURSEMENTS</button> <button id="refresh" class="btn btn-light">Refresh</button></span> 
     </div>
-    <script src="getMyreimbursements.js"></script>
+    <script src="getmyreimbs.js"></script>
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 </body>
 </html>
